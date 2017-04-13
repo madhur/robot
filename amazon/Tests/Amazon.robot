@@ -10,6 +10,7 @@ User must sign in to check out
     [Tags]  Smoke
     open browser  http://www.amazon.com  chrome
     close browser
+    
 
 
 *** Keywords ***
