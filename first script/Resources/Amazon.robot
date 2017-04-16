@@ -14,12 +14,12 @@ Search for Products
 
     LandingPage.Load
     LandingPage.Verify Page Loaded
-    Input Text  id=twotabsearchtextbox  Ferrari 458
-    Click Button  xpath=//*[@id="nav-search"]/form/div[2]/div/input
-    Wait Until Page Contains  "Ferrari 458"
+    TopNav.Search for Products
+    SearchResults.Verify Search Completed
+
 
 Select Product from Search Results
-    Click Link  css=#result_0 a.s-access-detail-page
+    SearchResults.Click Product Link
     Wait Until Page Contains  Back to search results
 
 Add Product to Cart

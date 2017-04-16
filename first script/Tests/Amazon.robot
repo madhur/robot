@@ -12,13 +12,33 @@ Suite Teardown  Cleanup Testing data
 # pybot -d results tests/amazon.robot
 
 *** Variables ***
+${BROWSER} =  chrome
+${START_URL} =  https://www.amazon.com
+${SEARCH_TERM} =  Ferrari 458
 
 *** Test Cases ***
+
+Logged out user can search for products
+    [Tags]  Smoke
+    Amazon.Search for Products
+
+Logged out user can view a product
+    [Tags]  Smoke
+    Amazon.Search for Products
+    Amazon.Select Product from Search Results
+
+
+Logged out user can add product to cart
+    [Tags]  Smoke
+    Amazon.Search for Products
+    Amazon.Select Product from Search Results
+    Amazon.Add Product to Cart
+
 User must search for products
     [Documentation]  This is some basic info about the test
     [Tags]  Smoke
 
-    Search for Products
+    Amazon.Search for Products
 
 
 *** Test Cases ***
@@ -26,8 +46,8 @@ User must sign in to check out
     [Documentation]  This is some basic info about the test
     [Tags]  Main
 
-    Search for Products
-    Select Product from Search Results
-    Add Product to Cart
-    Begin Checkout
+    Amazon.Search for Products
+    Amazon.Select Product from Search Results
+    Amazon.Add Product to Cart
+    Amazon.Begin Checkout
 
