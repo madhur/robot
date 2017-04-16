@@ -24,7 +24,7 @@ User must search for products
 *** Test Cases ***
 User must sign in to check out
     [Documentation]  This is some basic info about the test
-    [Tags]  Smoke
+    [Tags]  Main
 
     Search for Products
     Select Product from Search Results
